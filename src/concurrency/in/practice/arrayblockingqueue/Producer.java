@@ -15,10 +15,12 @@ public class Producer implements Runnable {
         //produce messages
         for(int i=0; i<100; i++){
             Message msg = new Message(""+i);
-            try {
-                Thread.sleep(i);
-                queue.put(msg);
+            try {                
+                queue.put(msg);                
                 System.out.println("Produced "+msg.getMsg());
+                if (i==10 || i==20 || i==30 || i==40 || i==50){
+                  Thread.sleep(2000);
+                }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

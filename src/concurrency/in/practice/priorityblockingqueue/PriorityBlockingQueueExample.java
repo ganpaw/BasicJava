@@ -40,7 +40,7 @@ public class PriorityBlockingQueueExample {
             public void run() {
                 try {
                     for (int i = 0; i < names.length; i++) {
-                        System.out.println(queue.take());
+                        System.out.println("Consumed:"+queue.take());
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();

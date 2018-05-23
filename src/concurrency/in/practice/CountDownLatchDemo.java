@@ -74,8 +74,9 @@ class Service implements Runnable{
         } catch (InterruptedException ex) {
             Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println( name + " is Up");
+        System.out.println( name + " is Up ");
         latch.countDown(); //reduce count of CountDownLatch by 1
+        //System.out.println(latch.getCount());
         
     }
   
